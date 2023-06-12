@@ -1,7 +1,7 @@
 package com.premiumminds.internship.snail;
 
 import java.util.concurrent.Future;
-
+import java.util.concurrent.CompletableFuture;
 /**
  * Created by aamado on 05-05-2023.
  */
