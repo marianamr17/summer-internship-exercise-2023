@@ -29,8 +29,8 @@ public class SnailShellPatternTest {
 				{ 43, 44, 45, 46, 47, 48, 49 } };
 		  Future<int[]> v = getSnailShell(matrix);
 		  return v;
-	}
-  };
+}
+
 
   @Test
   public void ScreenLockinPatternTestFirst3Length2Test()
