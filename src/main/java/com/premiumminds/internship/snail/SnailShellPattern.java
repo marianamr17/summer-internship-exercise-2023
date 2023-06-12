@@ -24,8 +24,8 @@ class SnailShellPattern implements ISnailShellPattern {
 		int esquerda = 0;
 		
 		
-		if( matrix == null || matrix.length == 0) {
-			int[] v0 = new int [0];
+		if(matrix == null || matrix.length == 0) {
+			int[]v0 = new int[0];
 			future.complete(v0);
 			return future;
 		}
@@ -33,7 +33,7 @@ class SnailShellPattern implements ISnailShellPattern {
 		while (true) {
 			// correr matriz da esquerda para a direita
 			for (int i = esquerda; i <= direita; i++) {
-				v[iv] = (matrix[cima][i]);
+				v[iv] = matrix[cima][i];
 				iv++;
 			}
 			cima++;
@@ -43,7 +43,7 @@ class SnailShellPattern implements ISnailShellPattern {
 
 			// correr matriz de cima para baixo
 			for (int i = cima; i <= baixo; i++) {
-				v[iv] = (matrix[i][direita]);
+				v[iv] = matrix[i][direita];
 				iv++;
 			}
 			direita--;
@@ -53,7 +53,7 @@ class SnailShellPattern implements ISnailShellPattern {
 
 			// correr matriz de baixo para cima
 			for (int i = direita; i >= esquerda; i--) {
-				v[iv] = (matrix[baixo][i]);
+				v[iv] = matrix[baixo][i];
 				iv++;
 			}
 			baixo--;
@@ -63,7 +63,7 @@ class SnailShellPattern implements ISnailShellPattern {
 
 			// correr matriz da direita para a esquerda
 			for (int i = baixo; i >= cima; i--) {
-				v[iv] = (matrix[i][esquerda]);
+				v[iv] = matrix[i][esquerda];
 				iv++;
 			}
 			esquerda++;
